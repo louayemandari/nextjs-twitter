@@ -5,6 +5,9 @@
 .twitterBlue{
   background-color: #1DA1F3;
 }
+.twitterIcon{
+  color: #1DA1F3;
+}
 .twitterBlue:hover{
   background-color: #45a9e7;
 }
@@ -16,3 +19,23 @@
 .text-twitter{
   color: #1DA1F3;
 }
+.filetype {
+  background-color: #4188eb;
+  color: #fff;
+  border: 1px solid #4188eb;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.filetype:hover {
+  background-color: #3071c6;
+}
+
+.filetype:active {
+  background-color: #3071c6;
+  transform: scale(0.9);
+}
+
+
