@@ -7,6 +7,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import WhatsHappening from '../rightSide/WhatsHappening';
 import Search from '../rightSide/Search';
+import Feed from './Feed';
 function Main() {
   return (
     <div className='flex w-screen h-screen'>
@@ -16,6 +17,7 @@ function Main() {
       </div>
       <div className='bg-red-400 w-3/5 overflow-y-scroll scrollbar-none '>
         {/* Use 'overflow-y-scroll' and 'scrollbar-none' classes */}
+        <Feed/>
         
      
       </div>
