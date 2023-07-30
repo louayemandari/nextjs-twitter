@@ -11,13 +11,15 @@ import Feed from './Feed';
 function Main() {
   return (
     <div className='flex w-screen h-screen twitterDark '>
-      <div className='flex flex-col   text-center w-1/5 border-r-2 border-slate-700 sticky top-0 overflow-hidden  '>
+      <div className='flex flex-col   text-center w-1/5 border-r border-slate-50 sticky top-0 overflow-hidden  '>
         {/* Add 'overflow-hidden' class to hide the scroll bar */}
-        <TwitterIcon className=' mx-auto my-10 text-4xl text-slate-50'/>
+        <TwitterIcon className=' mx-auto my-10 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
        <div className='flex flex-col justify-center text-center mx-auto my-10'>
-       <HomeIcon className='text-4xl  text-slate-50'/>
-        <MoreHorizOutlinedIcon className='text-4xl text-slate-50'/>
-        <AccountCircleOutlinedIcon className='text-4xl text-slate-50'/>
+
+       <HomeIcon className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
+         <NotificationsNoneOutlinedIcon className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
+        <MoreHorizOutlinedIcon className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
+        <AccountCircleOutlinedIcon className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
        </div>
       </div>
       <div className=' w-3/5 overflow-y-scroll scrollbar-none '>
@@ -26,7 +28,7 @@ function Main() {
         
      
       </div>
-      <div className=' border-l-2 border-slate-700 w-1/5 sticky top-0 overflow-hidden '>
+      <div className=' border-l border-slate-50 w-1/5 sticky top-0 overflow-hidden '>
         {/* Add 'overflow-hidden' class to hide the scroll bar */}
         <Search/>
         <WhatsHappening/>

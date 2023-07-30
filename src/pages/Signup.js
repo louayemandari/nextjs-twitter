@@ -7,7 +7,7 @@ import Main from '@/components/main/Main'
 function SignupPage() {
   return (
     <div>
-      <Main/>
+      <Signup/>
         
         
     </div>
