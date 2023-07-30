@@ -1,3 +1,16 @@
+##Twitter Clone Created with NEXT.JS and Supabase
+This app that i have created is a replica or a clone of the real twitter webapp.
+My Tech Stack:
+- Next.js with JSX syntax
+- Tailwindcss for rapid prototyping of the design and UI elements
+- NextUI for some UI elements
+- Supabase for backend operations that include Auth and CRUD operations
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
