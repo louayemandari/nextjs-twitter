@@ -5,6 +5,9 @@
 ::-webkit-scrollbar {
   display: none;
 }
+.twitterDark{
+  background-color: #000000;
+}
 .twitterBlue{
   background-color: #1DA1F3;
 }
