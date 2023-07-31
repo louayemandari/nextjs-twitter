@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 export default function Home() {
-  
+  const router =useRouter()
   const loginbar = 'bg-slate-50 border rounded-3xl  text-twitter w-3/4 mx-auto h-[54px] my-5  '
   const Signupbar = 'twitterBlue border rounded-3xl text-slate-200 w-3/4 mx-auto h-[54px] my-5  '
   

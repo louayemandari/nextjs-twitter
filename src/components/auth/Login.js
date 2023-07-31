@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import supabase from "@/supabase/supabaseConfig";
-
+import { useContext } from "react";
+import { MyContext } from "@/context/MyContext";
 function Login() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const {user,setUser} = useContext(MyContext)
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
@@ -22,6 +23,7 @@ function Login() {
         password: password,
       });
       console.log(data)
+      setUser(data)
 
       if (data) {
         console.log(`you have successfully logged in to your account ${email}`);
