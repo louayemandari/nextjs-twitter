@@ -3,6 +3,7 @@ import Poster from './Poster';
 import Tweets from './Tweets';
 import { MyContext } from '@/context/MyContext';
 import supabase from '@/supabase/supabaseConfig';
+import { timeAgo } from '@/functions/timeAgo';
 
 function Feed() {
   const { user } = useContext(MyContext);
@@ -29,7 +30,7 @@ function Feed() {
 
       
       {data.map((item) => (
-        <Tweets key={item.id} tweet={item.text} username={item.email} time={item.created_at} />
+        <Tweets key={item.id} tweet={item.text} username={item.email} time={timeAgo(item.created_at)} />
       ))}
 
       {/**Tweets */}

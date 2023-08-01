@@ -26,8 +26,7 @@ function Poster() {
     console.log('Inserted data:', data);
     console.log('Error:', error);
     console.log(data)
-    const timeAgoString = timeAgo(supabaseTimestamp);
-    console.log(timeAgoString);
+    
 
     // Clear the text input
     setTextTweet('');
