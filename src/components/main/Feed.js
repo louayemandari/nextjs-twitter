@@ -1,13 +1,14 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Poster from './Poster';
 import Tweets from './Tweets';
-import { MyContext } from '@/context/MyContext';
+
 import supabase from '@/supabase/supabaseConfig';
 import { timeAgo } from '@/functions/timeAgo';
-
+import { MyContext } from '@/context/MyContext';
 function Feed() {
-  const { user } = useContext(MyContext);
+
   const [data, setData] = useState([]);
+  const { searched, useSearched } = useContext(MyContext);
 
   useEffect(() => {
     async function fetchDataFromSupabase() {
