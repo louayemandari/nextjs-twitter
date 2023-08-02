@@ -1,6 +1,9 @@
 import React from 'react'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import supabase from '@/supabase/supabaseConfig';
+
 function Search() {
+  
   return (
     <div className='mx-1 my-2 rounded-full flex bg-slate-500 '>
       <SearchOutlinedIcon className='text-white m-1'/>
