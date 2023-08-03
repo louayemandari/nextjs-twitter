@@ -12,10 +12,15 @@ function Feed() {
 
   useEffect(() => {
     async function fetchDataFromSupabase() {
-      const { data, error } = await supabase.from('tweets').select();
+      const { data, error } = await supabase
+  .from('tweets')
+  .select('*')
+  .order('datetime', { ascending: false })
+  .limit(20);
+
       if (data) {
          
-        setData(data.reverse()); // Store the fetched data in the state
+        setData(data); // Store the fetched data in the state
       }
       if (error) {
         console.error('Error fetching data:', error);
@@ -31,7 +36,7 @@ function Feed() {
 
       
       {data.map((item) => (
-        <Tweets key={item.id} tweet={item.text} username={item.email} time={timeAgo(item.created_at)} />
+        <Tweets key={item.id} tweet={item.text} username={item.username} time={timeAgo(item.datetime)} />
       ))}
 
       {/**Tweets */}

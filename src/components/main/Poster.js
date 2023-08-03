@@ -5,6 +5,7 @@ import ImageIcon from '@mui/icons-material/Image';
 import supabase from '@/supabase/supabaseConfig';
 import { MyContext } from '@/context/MyContext';
 import {timeAgo} from '@/functions/timeAgo';
+import moment from 'moment';
 function Poster() {
   const {user} = useContext(MyContext)
   const [textTweet, setTextTweet] = useState('');
@@ -16,21 +17,22 @@ function Poster() {
     // Create a new tweet object
     const tweet = {
       text: textTweet,
-      email:user.user.email
+      username: user.user.email,
+      datetime: new Date().toISOString(),
     };
-    
+  
     console.log('Submitting tweet:', tweet);
-    
+  
     // Save the tweet to Supabase
     const { data, error } = await supabase.from('tweets').insert(tweet);
     console.log('Inserted data:', data);
     console.log('Error:', error);
     console.log(data)
-    
-
+  
     // Clear the text input
     setTextTweet('');
   };
+  
 
   return (
     <div className='flex flex-col border-b border-b-slate-50'>

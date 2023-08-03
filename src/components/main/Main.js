@@ -8,15 +8,20 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import WhatsHappening from '../rightSide/WhatsHappening';
 import Search from '../rightSide/Search';
 import Feed from './Feed';
+import { useRouter } from 'next/router';
+import SearchIcon from '@mui/icons-material/Search';
 function Main() {
+  const router = useRouter()
   return (
     <div className='flex w-screen h-screen twitterDark '>
       <div className='flex flex-col   text-center w-1/5 border-r border-slate-50 sticky top-0 overflow-hidden  '>
         {/* Add 'overflow-hidden' class to hide the scroll bar */}
-        <TwitterIcon className=' mx-auto my-10 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
+        <TwitterIcon onClick={()=>router.push('/hub')} className=' mx-auto my-10 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
        <div className='flex flex-col justify-center text-center mx-auto my-10'>
 
-       <HomeIcon className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
+       
+       <HomeIcon onClick={()=>router.push('/hub')} className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
+       <SearchIcon onClick={()=>router.push('/Explore')} className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
          <NotificationsNoneOutlinedIcon className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
         <MoreHorizOutlinedIcon className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
         <AccountCircleOutlinedIcon className='my-5 text-4xl text-slate-50 cursor-pointer hover:text-slate-300 hover:transition-5000'/>
