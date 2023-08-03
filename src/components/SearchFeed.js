@@ -11,7 +11,7 @@ function SearchFeed({value}) {
             const { data: records, error } = await supabase
             .from('tweets')
             .select('*') // You can replace '*' with the specific columns you want to fetch
-            .or(`text.eq.${value}`,` email.eq.${value}`);
+            .like('text',`${value}%`);
             if (error) {
               throw new Error(error.message);
             }
